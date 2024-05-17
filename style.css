@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --shark-50: #f6f6f6;
+  --shark-100: #e7e7e7;
+  --shark-200: #d1d1d1;
+  --shark-300: #b0b0b0;
+  --shark-400: #888888;
+  --shark-500: #6d6d6d;
+  --shark-600: #5d5d5d;
+  --shark-700: #4f4f4f;
+  --shark-800: #454545;
+  --shark-900: #3d3d3d;
+  --shark-950: #222222;
+
+  --koromiko-50: #fff8ed;
+  --koromiko-100: #fff0d4;
+  --koromiko-200: #ffdea9;
+  --koromiko-300: #ffc470;
+  --koromiko-400: #fea139;
+  --koromiko-500: #fc8413;
+  --koromiko-600: #ed6809;
+  --koromiko-700: #c54e09;
+  --koromiko-800: #9c3e10;
+  --koromiko-900: #7e3410;
+  --koromiko-950: #441906;
+
+  --mardi-gras-50: #fef4ff;
+  --mardi-gras-100: #fde7ff;
+  --mardi-gras-200: #fccfff;
+  --mardi-gras-300: #fca8ff;
+  --mardi-gras-400: #fb75fd;
+  --mardi-gras-500: #f241f4;
+  --mardi-gras-600: #d920d9;
+  --mardi-gras-700: #b417b0;
+  --mardi-gras-800: #93158e;
+  --mardi-gras-900: #781772;
+  --mardi-gras-950: #32012f;
+
+  --color-base: var(--mardi-gras-950);
+  --text-color-base: var(--shark-50);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+
+img {
+  width: inherit;
+  height: inherit;
+}
+
+body {
+  background: var(--color-base);
+  color: var(--text-color-base);
+}
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 32px 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .nav {
+  display: flex;
+  gap: 48px;
+}
+
+.nav .list .link {
+  color: var(--shark-200);
+}
+
+.nav .list.active .link {
+  color: var(--shark-100);
+}
+
+section {
+  position: relative;
+  height: 100%;
+  padding: 0 120px;
+  display: flex;
+  align-items: center;
+}
+
+.homepage {
+  width: 100%;
+  min-height: 100vh;
+  gap: 64px;
+  justify-content: space-between;
+}
+
+.homepage::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25%;
+  height: 100%;
+  background: var(--koromiko-300);
+  z-index: -1;
+}
+
+.title {
+  font-size: 2.5rem;
+  line-height: 3.5rem;
+}
+
+.text {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+
+.homepage .details .text {
+  margin: 32px 0 24px;
+}
+
+.homepage .details .link {
+  font-size: 1.5rem;
+  display: inline-block;
+  padding: 16px 32px;
+  background: var(--koromiko-300);
+  color: var(--color-base);
+  border-radius: 4px;
+}
+
+.homepage .img {
+  width: 100%;
+  height: 100%;
+}
